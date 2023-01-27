@@ -37,7 +37,6 @@ namespace DWSIM.Analytics
             this.Panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.Button1 = new System.Windows.Forms.Button();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
@@ -64,9 +63,9 @@ namespace DWSIM.Analytics
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(639, 33);
             this.Label2.TabIndex = 2;
-            this.Label2.Text = "As a part of its commitment to continuous improvement of DWSIM, the developer req" +
-    "uests your permission to collect anonymous usage statistics and error (crash) in" +
-    "formation.";
+            this.Label2.Text = "As a part of its commitment to continuous improvement of DWSIM, I (Daniel) reques" +
+    "t your permission to collect anonymous usage statistics and error (crash) inform" +
+    "ation.";
             // 
             // Label1
             // 
@@ -96,7 +95,6 @@ namespace DWSIM.Analytics
             this.Panel2.BackColor = System.Drawing.Color.White;
             this.Panel2.Controls.Add(this.button2);
             this.Panel2.Controls.Add(this.Button3);
-            this.Panel2.Controls.Add(this.Button1);
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel2.Location = new System.Drawing.Point(0, 441);
             this.Panel2.Name = "Panel2";
@@ -105,7 +103,7 @@ namespace DWSIM.Analytics
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(164, 23);
+            this.button2.Location = new System.Drawing.Point(19, 23);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 23);
             this.button2.TabIndex = 3;
@@ -124,19 +122,9 @@ namespace DWSIM.Analytics
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Button1
-            // 
-            this.Button1.Location = new System.Drawing.Point(12, 23);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(134, 23);
-            this.Button1.TabIndex = 0;
-            this.Button1.Text = "View Privacy Policy";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // TextBox1
             // 
-            this.TextBox1.Location = new System.Drawing.Point(147, 408);
+            this.TextBox1.Location = new System.Drawing.Point(163, 408);
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(287, 20);
             this.TextBox1.TabIndex = 9;
@@ -190,7 +178,6 @@ namespace DWSIM.Analytics
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
