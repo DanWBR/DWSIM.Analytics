@@ -44,6 +44,8 @@ namespace DWSIM.Analytics
         {
             this.ChangeDefaultFont();
 
+            FormMain.TranslateFormFunction?.Invoke(this);
+
             TextBox1.Text = Properties.Settings.Default.EmailAddress;
         }
 

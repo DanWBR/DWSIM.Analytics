@@ -35,6 +35,8 @@ namespace DWSIM.Analytics
 
             UpdateText();
 
+            FormMain.TranslateFormFunction?.Invoke(this);
+
 #if !DEBUG
             if (!Properties.Settings.Default.ShouldAsk) Close();
 #endif
@@ -44,11 +46,11 @@ namespace DWSIM.Analytics
         {
             if (Properties.Settings.Default.Enabled)
             {
-                toolStripSplitButton1.Text = "Anonymous Analytics Sharing is ON";
+                toolStripSplitButton1.Text = FormMain.TranslateFunction?.Invoke("Anonymous Analytics Sharing is ON");
             }
             else
             {
-                toolStripSplitButton1.Text = "Anonymous Analytics Sharing is OFF";
+                toolStripSplitButton1.Text = FormMain.TranslateFunction?.Invoke("Anonymous Analytics Sharing is OFF");
             }
         }
 
@@ -86,12 +88,12 @@ namespace DWSIM.Analytics
             {
                 Properties.Settings.Default.Enabled = false;
                 AppCenter.SetEnabledAsync(false);
-                toolStripSplitButton1.Text = "Anonymous Analytics Sharing is OFF";
+                toolStripSplitButton1.Text = FormMain.TranslateFunction?.Invoke("Anonymous Analytics Sharing is OFF");
             }
             else {
                 Properties.Settings.Default.Enabled = true;
                 AppCenter.SetEnabledAsync(true);
-                toolStripSplitButton1.Text = "Anonymous Analytics Sharing is ON";
+                toolStripSplitButton1.Text = FormMain.TranslateFunction?.Invoke("Anonymous Analytics Sharing is ON");
             }
             Properties.Settings.Default.Save();
         }
