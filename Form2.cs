@@ -25,11 +25,6 @@ namespace DWSIM.Analytics
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            this.ChangeDefaultFont();
-
-            label1.Font = new Font(label1.Font.FontFamily.Name, 14.25f, FontStyle.Bold);
-            label2.Font = SystemFonts.MessageBoxFont;
-
             statusStrip1.Visible = false;
             mainform.StatusStrip1.Items.Add(toolStripSplitButton1);
 
