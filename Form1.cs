@@ -26,7 +26,6 @@ namespace DWSIM.Analytics
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.EmailAddress = TextBox1.Text;
             Properties.Settings.Default.Enabled = true;
             Properties.Settings.Default.Save();
             Close();
@@ -34,7 +33,6 @@ namespace DWSIM.Analytics
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.EmailAddress = TextBox1.Text;
             Properties.Settings.Default.Enabled = false;
             Properties.Settings.Default.Save();
             Close();
@@ -45,13 +43,16 @@ namespace DWSIM.Analytics
             this.ChangeDefaultFont();
 
             FormMain.TranslateFormFunction?.Invoke(this);
-
-            TextBox1.Text = Properties.Settings.Default.EmailAddress;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             Process.Start("https://dwsim.org/index.php/sample-collected-data/");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/DanWBR/DWSIM.Analytics");
         }
     }
 }
