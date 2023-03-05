@@ -33,7 +33,7 @@ namespace DWSIM.Analytics
             FormMain.TranslateFormFunction?.Invoke(this);
 
 #if !DEBUG
-            if (!Properties.Settings.Default.ShouldAsk) Close();
+            if (!Properties.Settings.Default.ShouldAsk) Hide();
 #endif
         }
 
