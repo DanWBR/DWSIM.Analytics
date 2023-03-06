@@ -32,9 +32,6 @@ namespace DWSIM.Analytics
 
             FormMain.TranslateFormFunction?.Invoke(this);
 
-#if !DEBUG
-            if (!Properties.Settings.Default.ShouldAsk) Hide();
-#endif
         }
 
         private void UpdateText()
@@ -58,6 +55,7 @@ namespace DWSIM.Analytics
         private void button3_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Enabled = false;
+            Properties.Settings.Default.ShouldAsk = false;
             Properties.Settings.Default.Save(); 
             UpdateText();
             Close();
@@ -66,6 +64,7 @@ namespace DWSIM.Analytics
         private void button2_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Enabled = true;
+            Properties.Settings.Default.ShouldAsk = false;
             Properties.Settings.Default.Save();
             UpdateText();
             Close();
@@ -73,8 +72,6 @@ namespace DWSIM.Analytics
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Properties.Settings.Default.ShouldAsk = false;
-            Properties.Settings.Default.Save();
         }
 
         private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
