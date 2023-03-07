@@ -42,7 +42,8 @@ namespace DWSIM.Analytics
                 var y = mainform.Location.Y + mainform.Height - f2.Height - 40;
                 f2.Location = new System.Drawing.Point(x, y);
                 f2.Show();
-
+                f2.TransferControls();
+                f2.UpdateText();
 #if !DEBUG
                 if (!Properties.Settings.Default.ShouldAsk) f2.Close();
 #endif

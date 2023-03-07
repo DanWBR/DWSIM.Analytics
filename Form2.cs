@@ -24,17 +24,18 @@ namespace DWSIM.Analytics
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            FormMain.TranslateFormFunction?.Invoke(this);
+        }
 
+        public void TransferControls()
+        {
             statusStrip1.Visible = false;
             mainform.StatusStrip1.Items.Add(toolStripSplitButton1);
 
             UpdateText();
-
-            FormMain.TranslateFormFunction?.Invoke(this);
-
         }
 
-        private void UpdateText()
+        public void UpdateText()
         {
             if (Properties.Settings.Default.Enabled)
             {
