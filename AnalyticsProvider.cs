@@ -6,6 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using DWSIM.Interfaces;
+using DWSIM.ExtensionMethods;
 
 namespace DWSIM.Analytics
 {
@@ -33,12 +34,20 @@ namespace DWSIM.Analytics
         public void Initialize()
         {
 
-            var f2 = new Form2();
-            f2.mainform = mainform;
-            var x = mainform.Location.X + mainform.Width - f2.Width - 40;
-            var y = mainform.Location.Y + mainform.Height - f2.Height - 40;
-            f2.Location = new System.Drawing.Point(x, y);
-            f2.Show();
+            mainform.UIThread(() =>
+            {
+                var f2 = new Form2();
+                f2.mainform = mainform;
+                var x = mainform.Location.X + mainform.Width - f2.Width - 40;
+                var y = mainform.Location.Y + mainform.Height - f2.Height - 40;
+                f2.Location = new System.Drawing.Point(x, y);
+                f2.Show();
+                f2.TransferControls();
+                f2.UpdateText();
+#if !DEBUG
+                if (!Properties.Settings.Default.ShouldAsk) f2.Close();
+#endif
+            });
 
             // enable analytics
 

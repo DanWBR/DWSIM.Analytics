@@ -37,9 +37,9 @@ namespace DWSIM.Analytics
             this.Panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -122,21 +122,14 @@ namespace DWSIM.Analytics
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // TextBox1
-            // 
-            this.TextBox1.Location = new System.Drawing.Point(163, 408);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(287, 20);
-            this.TextBox1.TabIndex = 9;
-            // 
             // Label4
             // 
             this.Label4.AutoSize = true;
             this.Label4.Location = new System.Drawing.Point(16, 411);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(125, 13);
+            this.Label4.Size = new System.Drawing.Size(282, 13);
             this.Label4.TabIndex = 8;
-            this.Label4.Text = "E-mail Address (optional):";
+            this.Label4.Text = "The Anonymous Analytics component is also open-source.";
             // 
             // Label3
             // 
@@ -146,14 +139,25 @@ namespace DWSIM.Analytics
             this.Label3.TabIndex = 7;
             this.Label3.Text = resources.GetString("Label3.Text");
             // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.button1.Location = new System.Drawing.Point(314, 406);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "View Source Code";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(812, 508);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Panel2);
-            this.Controls.Add(this.TextBox1);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -178,9 +182,9 @@ namespace DWSIM.Analytics
         internal System.Windows.Forms.PictureBox PictureBox1;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.TextBox TextBox1;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Button button2;
+        internal System.Windows.Forms.Button button1;
     }
 }
