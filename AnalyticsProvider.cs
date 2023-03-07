@@ -47,6 +47,7 @@ namespace DWSIM.Analytics
 
             System.Threading.Tasks.Task.Run(() =>
             {
+                AppCenter.LogLevel = LogLevel.Verbose;
                 AppCenter.Start(Global.AppCenterKey,
                                 typeof(Microsoft.AppCenter.Analytics.Analytics),
                                 typeof(Crashes));
