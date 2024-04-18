@@ -75,6 +75,11 @@ namespace DWSIM.Analytics
                     return null;
             };
 
+            FlowsheetSolver.FlowsheetSolver.FlowsheetCalculationStarted += (esender, eargs, data2) =>
+            {
+                Microsoft.AppCenter.Analytics.Analytics.TrackEvent("Flowsheet Calculation Started");
+            };
+
             FlowsheetSolver.FlowsheetSolver.FlowsheetCalculationFinished += (esender, eargs, data2) =>
             {
                 try
